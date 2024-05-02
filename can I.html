@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Denise</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      background-color: #ffe4e1; /* Light pink background */
+      padding-top: 50px;
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #e91e63; /* Hot pink for love theme */
+      border: none;
+      border-radius: 25px; /* Rounder corners for softer look */
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    .button.disabled {
+      background-color: #b0bec5; /* Grey for disabled state */
+      cursor: not-allowed;
+    }
+
+    #message {
+      display: none;
+      margin-top: 20px;
+      text-align: left;
+      max-width: 600px;
+      margin: 0 auto;
+      background: #ffcdd2; /* Light pink */
+      padding: 20px;
+      border-radius: 15px; /* Round corners for a softer look */
+      border: 1px solid #e57373; /* Light red border */
+    }
+
+    #yesButton {
+      background-color: #4caf50; /* Green to represent a positive response */
+    }
+
+    #commentBox {
+      border: 1px solid #e91e63; /* Pink border for text area */
+    }
+
+    h3 {
+      text-align: left;
+      color: #d32f2f; /* Deep red for headings */
+    }
+  </style>
+</head>
+<body>
+  <center><button id="initialButton" class="button">Hello, Denise!</button></center>
+
+  <div id="message">
+    <p>I'm writing this message because I want to clarify something important. To be honest, I hesitated for a while, but I finally found the courage to express what I truly feel.</p>
+    <p>Alam mo, lagi kitang sinasabihan na ikaw ang unang babaeng nagustuhan ko nang ganito (just to let you know na wala akong past rs or talking stage). You're the first girl who made me feel things I’ve never felt before, so thank you den. And the first girl to call me "baby"—which still makes me smile. But kidding aside, please read this message without feeling awkward.</p>
+    <p>It's been three months since we started talking, and I believe it's time for us to define our relationship. Napansin ko na hindi tama na nasa ganitong "situationship" tayo. I also feel that it's unfair to you, and I don't want to continue with this setup for too long. I would like to get to know you better, pero naisip ko na pwede naman tayong magkakilala habang nasa courtship stage tayo, di ba?</p>
+    <p>I realized that my belief that we should know each other deeply before moving forward might have been wrong. Sometimes, it's through courtship that we learn more about each other.</p>
+    <p>During the past three months, you've often tested me, asking if I'd get mad at you over small things. Honestly, I don't see any reason to get upset with you, even over things that might normally cause anger dahil nakaugalian ko na talaga yan.</p>
+
+    <p>I composed this message to bring clarity to our potential relationship, because I don't want you to feel neglected or grow impatient due to our prolonged talking stage. I want you to know that my intentions are sincere. Might I be so lucky as to be your suitor, may I be the one who sweep you off your feet, cut your nails, buy you a matcha & ice cream, and be the one to take care of you? Would you give me the chance to court you? Take your time to think about it. Whatever your decision, I will respect it.</p>
+    
+    <p>Napag-usapan natin dati na it might take months or even years para sa akin to make a decision about us. Regardless, kahit gaano pa katagal, I'm willing to take the risk. I just hope na hindi ka mapagod sa atin.</p>
+    <button id="yesButton" class="button">Yes</button>
+    <button id="noButton" class="button disabled">No</button>
+    <textarea id="commentBox" rows="4" cols="50" placeholder="Type your comment here, then ss. Wala akong database, sorry"></textarea>
+  </div>
+
+  <script>
+    const initialButton = document.getElementById('initialButton');
+    const message = document.getElementById('message');
+    const yesButton = document.getElementById('yesButton');
+
+    initialButton.addEventListener('click', () => {
+      initialButton.textContent = "Oh, did you click by accident? No worries, just give it another try!.";
+      initialButton.onclick = () => {
+        initialButton.style.display = 'none';
+        message.style.display = 'block';
+      };
+    });
+
+    yesButton.addEventListener('click', () => {
+      alert("Yay! Thank you, baby...I mean Denise, ay baby pala.");
+    });
+  </script>
+</body>
+</html>
